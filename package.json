@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "pixi.js": "4.8.1"
+  },
+  "devDependencies": {
+    "brunch": "^2.10.12",
+    "javascript-brunch": "^2.10.0",
+    "sass-brunch": "^2.10.4",
+    "uglify-js-brunch": "^2.10.0"
+  },
+  "scripts": {
+    "build": "brunch build",
+    "watch": "brunch watch",
+    "server": "brunch watch --server",
+    "release": "brunch build --production"
+  }
+}
