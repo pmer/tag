@@ -20,7 +20,6 @@ PIXI.loader
     .load(setup);
 
 function setup() {
-    //This code will run when the loader has finished loading the image
     const wizard = new PIXI.Sprite(
         PIXI.loader.resources['images/wizard.png'].texture
     );
