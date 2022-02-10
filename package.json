@@ -1,15 +1,20 @@
 {
-  "dependencies": {
-    "pixi.js": "6.2.2"
-  },
-  "devDependencies": {
-    "brunch": "^4.0.0",
-    "electron": "^17.0.0"
-  },
-  "scripts": {
-    "build": "brunch build",
-    "watch": "brunch watch",
-    "server": "brunch watch --server",
-    "release": "brunch build --production"
-  }
+    "name": "Tag",
+    "description": "Minotaur Tag",
+    "version": "0.1.0",
+    "source": "app/index.html",
+    "dependencies": {
+        "pixi.js": "6.2.2"
+    },
+    "devDependencies": {
+        "electron": "^17.0.0",
+        "parcel": "^2.3.0",
+        "querystring-es3": "^0.2.1"
+    },
+    "scripts": {
+        "start": "parcel",
+        "watch": "parcel watch",
+        "electron": "electron electron/main.js",
+        "build": "parcel build --public-url ./; ELECTRON_IS_PROD=1 electron electron/main.js"
+    }
 }
