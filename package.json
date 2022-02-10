@@ -1,12 +1,10 @@
 {
   "dependencies": {
-    "pixi.js": "4.8.1"
+    "pixi.js": "6.2.2"
   },
   "devDependencies": {
-    "brunch": "^2.10.12",
-    "javascript-brunch": "^2.10.0",
-    "sass-brunch": "^2.10.4",
-    "uglify-js-brunch": "^2.10.0"
+    "brunch": "^4.0.0",
+    "electron": "^17.0.0"
   },
   "scripts": {
     "build": "brunch build",

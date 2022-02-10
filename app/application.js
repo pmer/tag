@@ -1,17 +1,12 @@
 const PIXI = require('pixi.js');
 
-const Application = PIXI.Application,
-      loader = PIXI.loader,
-      resources = PIXI.loader.resources,
-      Sprite = PIXI.Sprite;
-
-const app = new Application({
+const app = new PIXI.Application({
     width: 256,
     height: 256,
 });
 document.body.appendChild(app.view);
 
-loader
+app.loader
     .add([
         'images/baum.png',
         'images/cave.png',
@@ -24,8 +19,8 @@ loader
     ])
     .load(setup);
 
-function setup() {
-    const wizard = new Sprite(
+function setup(loader, resources) {
+    const wizard = new PIXI.Sprite(
         resources['images/wizard.png'].texture
     );
 
@@ -33,4 +28,8 @@ function setup() {
     wizard.scale.set(2, 2);
 
     app.stage.addChild(wizard);
+
+    app.ticker.add(() => {
+        wizard.rotation += 0.01;
+    });
 }
