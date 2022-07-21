@@ -8,7 +8,7 @@
     },
     "devDependencies": {
         "electron": "^17.4.10",
-        "parcel": "^2.3.0",
+        "parcel": "^2.6.2",
         "querystring-es3": "^0.2.1"
     },
     "scripts": {
