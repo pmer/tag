@@ -3,11 +3,12 @@
     "description": "Minotaur Tag",
     "version": "0.1.0",
     "source": "app/index.html",
+    "type": "module",
     "dependencies": {
         "pixi.js": "^8.13.1"
     },
     "devDependencies": {
-        "electron": "^22.3.25",
+        "electron": "^38.0.0",
         "parcel": "^2.15.4"
     },
     "scripts": {

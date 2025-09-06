@@ -1,6 +1,4 @@
-const path = require('path');
-
-const { app, BrowserWindow } = require('electron');
+import { app, BrowserWindow } from 'electron';
 
 const isDev =
     (
@@ -21,7 +19,7 @@ function createWindow() {
     if (isDev) {
         mainWindow.loadURL('http://localhost:1234');
     } else {
-        mainWindow.loadFile(path.join(__dirname, '../dist/index.html'));
+        mainWindow.loadURL(new URL('../dist/index.html', import.meta.url).href);
     }
 
     // mainWindow.webContents.openDevTools()
