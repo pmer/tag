@@ -1,11 +1,5 @@
 import {Application, Assets, Sprite} from 'pixi.js';
 
-const app = new Application({
-    width: 256,
-    height: 256,
-});
-document.body.appendChild(app.view);
-
 const urls = {
     baum: new URL('../assets/images/baum.png', import.meta.url).toString(),
     cave: new URL('../assets/images/cave.png', import.meta.url).toString(),
@@ -18,6 +12,13 @@ const urls = {
 };
 
 async function main() {
+    const app = new Application();
+    await app.init({
+        width: 256,
+        height: 256,
+    });
+    document.body.appendChild(app.canvas);
+
     const textures = {
         wizard: await Assets.load(urls.wizard),
     };
