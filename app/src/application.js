@@ -7,14 +7,14 @@ const app = new PIXI.Application({
 document.body.appendChild(app.view);
 
 const urls = {
-    baum: require('../assets/images/baum.png'),
-    cave: require('../assets/images/cave.png'),
-    forest: require('../assets/images/forest.png'),
-    indoors: require('../assets/images/indoors.png'),
-    indoors2: require('../assets/images/indoors_2.png'),
-    objects: require('../assets/images/objects.png'),
-    player: require('../assets/images/player.png'),
-    wizard: require('../assets/images/wizard.png'),
+    baum: new URL('../assets/images/baum.png', import.meta.url).toString(),
+    cave: new URL('../assets/images/cave.png', import.meta.url).toString(),
+    forest: new URL('../assets/images/forest.png', import.meta.url).toString(),
+    indoors: new URL('../assets/images/indoors.png', import.meta.url).toString(),
+    indoors2: new URL('../assets/images/indoors_2.png', import.meta.url).toString(),
+    objects: new URL('../assets/images/objects.png', import.meta.url).toString(),
+    player: new URL('../assets/images/player.png', import.meta.url).toString(),
+    wizard: new URL('../assets/images/wizard.png', import.meta.url).toString(),
 };
 
 app.loader
