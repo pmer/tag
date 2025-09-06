@@ -11,28 +11,24 @@ const urls = {
   wizard: new URL("../assets/images/wizard.png", import.meta.url).href,
 };
 
-async function main() {
-  const app = new Application();
-  await app.init({
-    width: 256,
-    height: 256,
-  });
-  document.body.appendChild(app.canvas);
+const app = new Application();
+await app.init({
+  width: 256,
+  height: 256,
+});
+document.body.appendChild(app.canvas);
 
-  const textures = {
-    wizard: await Assets.load(urls.wizard),
-  };
+const textures = {
+  wizard: await Assets.load(urls.wizard),
+};
 
-  const wizard = Sprite.from(textures.wizard);
+const wizard = Sprite.from(textures.wizard);
 
-  wizard.position.set(96, 96);
-  wizard.scale.set(2, 2);
+wizard.position.set(96, 96);
+wizard.scale.set(2, 2);
 
-  app.stage.addChild(wizard);
+app.stage.addChild(wizard);
 
-  app.ticker.add(() => {
-    wizard.rotation += 0.01;
-  });
-}
-
-main();
+app.ticker.add(() => {
+  wizard.rotation += 0.01;
+});
