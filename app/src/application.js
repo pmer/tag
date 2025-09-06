@@ -1,6 +1,6 @@
-import * as PIXI from 'pixi.js';
+import {Application, Assets, Sprite} from 'pixi.js';
 
-const app = new PIXI.Application({
+const app = new Application({
     width: 256,
     height: 256,
 });
@@ -17,23 +17,12 @@ const urls = {
     wizard: new URL('../assets/images/wizard.png', import.meta.url).toString(),
 };
 
-app.loader
-    .add([
-        urls.baum,
-        urls.cave,
-        urls.forest,
-        urls.indoors,
-        urls.indoors2,
-        urls.objects,
-        urls.player,
-        urls.wizard,
-    ])
-    .load(setup);
+async function main() {
+    const textures = {
+        wizard: await Assets.load(urls.wizard),
+    };
 
-function setup(loader, resources) {
-    const wizard = new PIXI.Sprite(
-        resources[urls.wizard].texture
-    );
+    const wizard = Sprite.from(textures.wizard);
 
     wizard.position.set(96, 96);
     wizard.scale.set(2, 2);
@@ -44,3 +33,5 @@ function setup(loader, resources) {
         wizard.rotation += 0.01;
     });
 }
+
+main();

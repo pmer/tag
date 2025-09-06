@@ -4,7 +4,7 @@
     "version": "0.1.0",
     "source": "app/index.html",
     "dependencies": {
-        "pixi.js": "6.2.2"
+        "pixi.js": "^7.4.3"
     },
     "devDependencies": {
         "electron": "^22.3.25",
