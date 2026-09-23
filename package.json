@@ -5,7 +5,7 @@
     "source": "app/index.html",
     "type": "module",
     "dependencies": {
-        "pixi.js": "^8.13.1"
+        "pixi.js": "8.21.0"
     },
     "devDependencies": {
         "electron": "44.4.3",
